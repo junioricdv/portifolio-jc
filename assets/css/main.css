@@ -650,41 +650,108 @@ section {
   }
 }
 
-/**********************
-		Testimonial
-**********************/
+/*********************************
+  TESTIMONIAL – REESCRITO DO ZERO
+*********************************/
+
 .testimonial {
   padding: 0;
-}
-#test-slider {
   background-color: #455579;
-  color: #fff;
-  padding: 60px;
 }
-.testimonial p {
-  position: relative;
-  padding: 0 20px 0 40px;
+
+/* Slider */
+#test-slider {
+  padding: 60px 40px;
+  color: #ffffff;
+}
+
+/* Alinha imagem e texto verticalmente */
+#test-slider .row {
+  display: flex;
+  align-items: center;
+}
+
+/* Imagem do projeto */
+#test-slider img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Coluna de texto */
+#test-slider .col-sm-7 {
+  padding-left: 30px;
+}
+
+/* Texto do depoimento */
+#test-slider .col-sm-7 p {
+  font-size: 2rem;
+  line-height: 1.8;
+  color: #f1f1f1;
+  margin-bottom: 24px;
+  padding-left: 16px;
+  border-left: 3px solid #0d6efd;
+}
+
+/* Nome do cliente */
+#test-slider .col-sm-7 h3 {
+  margin: 0;
+  font-size: 2.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Empresa / Projeto */
+#test-slider .col-sm-7 em,
+#test-slider .col-sm-7 span {
+  display: block;
+  margin-top: 4px;
+  font-size: 1.95rem;
+  color: #d0d6e4;
   font-style: italic;
-  margin: 100px 0;
-  line-height: 2;
 }
-.testimonial .item span {
-  padding-left: 40px;
+
+/* Owl dots (opcional, se estiver usando) */
+#test-slider .owl-dots {
+  margin-top: 30px;
+  text-align: center;
 }
-.testimonial p:after,
-.testimonial p:before {
-  position: absolute;
-  font-size: 24px;
+
+#test-slider .owl-dot span {
+  width: 10px;
+  height: 10px;
+  background: #ffffff50;
+  display: inline-block;
+  margin: 5px;
+  border-radius: 50%;
+  transition: background 0.3s;
 }
-.testimonial p:after {
-  content: '"';
-  right: 20px;
-  bottom: -10px;
+
+#test-slider .owl-dot.active span {
+  background: #0d6efd;
 }
-.testimonial p:before {
-  content: '"';
-  left: 20px;
-  top: -10px;
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  #test-slider {
+    padding: 40px 20px;
+  }
+
+  #test-slider .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #test-slider .col-sm-7 {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  #test-slider .col-sm-7 p {
+    border-left: none;
+    padding-left: 0;
+  }
 }
 
 /**********************
